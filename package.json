@@ -1,0 +1,26 @@
+{
+  "name": "proyectofinal",
+  "version": "1.0.0",
+  "description": "Primera version del proyecto con SASS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+   
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnzarria/proyectoFinal.git"
+  },
+  "author": "MZ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mnzarria/proyectoFinal/issues"
+  },
+  "homepage": "https://github.com/mnzarria/proyectoFinal#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.19"
+  }
+}

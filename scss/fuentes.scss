@@ -1,0 +1,52 @@
+$pDesktop:1rem;
+$fontFamily: '"Montserrat",sans-serif';
+
+
+.col-lg-10{
+	ol {
+		font: {
+			size:$pDesktop;
+			family:$fontFamily;
+		}
+	}
+} 
+
+a{color:black;}
+
+a,p,h1,h2,h3,h4,h5,li{
+    text-decoration: none;
+    font-family: "Montserrat",sans-serif;
+}
+
+li{list-style-type: none}
+/* ul{display: flex;} */
+
+*{padding: 0;margin: 0;}
+
+.p-10{padding: 10px;}
+.p-20{padding: 20px;}
+
+.m-10{margin:10px}
+.m-20{margin:20px}
+
+.font-small{font-size: 0.8rem;}
+.font-medium{font-size: 1rem;}
+.font-big{font-size: 1.2rem;}
+
+.txtPrimario{color: grey;}
+.txtSecundario{color: black;}
+.txtProducto{
+    width: 95%;
+    text-align:center;
+    color: black;
+	text-transform: uppercase;
+	font-size: 12px;
+}
+.txtPrecio{
+    width: 95%;
+    text-align:center;
+    color: black;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 700;
+}

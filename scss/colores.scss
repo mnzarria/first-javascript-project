@@ -1,0 +1,46 @@
+@import "fuentes";
+/* MAP GRADIENTES */
+$coloresGrad: (
+        grad-A-1: rgba(71, 205, 134, 1.0),
+        grad-A-2: rgba(53, 135, 52, 1.0),
+        grad-B-1:  rgba(122, 190, 94, 1.0),
+        grad-B-2: rgba(49, 130, 80, 1.0),
+); 
+$insta: #8a3ab9;
+$wp: #d33125;
+$fb: #3b5998;
+/*GRADIENTES ENCABEZADO Y PIE*/
+header{
+    background: map-get($coloresGrad, grad-A-1);
+    background: -webkit-linear-gradient(bottom, map-get($coloresGrad, grad-A-1), map-get($coloresGrad, grad-A-2));
+    background: -moz-linear-gradient(bottom, map-get($coloresGrad, grad-A-1), map-get($coloresGrad, grad-A-2));
+    background: linear-gradient(to top, map-get($coloresGrad, grad-A-1), map-get($coloresGrad, grad-A-2));
+}
+
+/*GRADIENTE BODY*/
+body{
+    background: map-get($coloresGrad, grad-B-2);
+}
+.categoria .card{
+  background: map-get($coloresGrad, grad-B-1);
+  background: -webkit-radial-gradient(center, map-get($coloresGrad, grad-B-1), map-get($coloresGrad, grad-B-2));
+  background: -moz-radial-gradient(center, map-get($coloresGrad, grad-B-1), map-get($coloresGrad, grad-B-2));
+  background: radial-gradient(ellipse at center, map-get($coloresGrad, grad-B-1), map-get($coloresGrad, grad-B-2));
+}
+
+.producto{
+  background: rgba(117, 218, 164,1.0) ;
+  background: -webkit-radial-gradient(center, map-get($coloresGrad, grad-B-1), map-get($coloresGrad, grad-B-2));
+  background: -moz-radial-gradient(center, map-get($coloresGrad, grad-B-1), map-get($coloresGrad, grad-B-2));
+  background: radial-gradient(ellipse at center, map-get($coloresGrad, grad-B-1), map-get($coloresGrad, grad-B-2));
+}
+/* MIXIN RRSS */
+@mixin redes($hover) {
+    font-size: 1rem; 
+    &:hover{
+      color: $hover;
+    }
+  }
+.rrss-facebook    {   @include redes ($fb);}
+.rrss-instagram   {   @include redes ($insta);}
+.rrss-youtube    {   @include redes ($wp); }

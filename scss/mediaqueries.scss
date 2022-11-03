@@ -1,0 +1,54 @@
+/* vista desktop */
+@media only screen and (min-width: 1024px){
+    .navbar-expand-lg .navbar-collapse{
+        justify-content:center;
+    }
+    .footerFlex{display: flex;justify-content: space-around;}
+    
+    .producto:hover{
+        scale: 105%;
+        border: solid black 1px;
+    }
+    .card:hover{
+        border-color: black;
+    }
+    header{
+        a{
+            padding-left: 5rem;
+        }
+    }
+    .full-screen{
+        min-height: 90vh;
+        max-height: 120vh;
+    }
+}
+/* vista mobile */
+@media only screen and (max-width: 1023px){
+	.footerFlex{display: flex;flex-direction: column;}
+    .aside{
+        display: none;
+    }
+    .categoria{
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+    }
+    .banner{
+        grid-area: banner;
+        display: flex;
+        justify-content: center;
+    }
+    .banner img{
+        max-width: 100%;
+    }
+    main iframe{
+        max-width: 90%;
+    }
+    main form li textarea{
+        max-width: 50%;
+    }
+    .filaTriple {
+        flex-direction: column;
+        align-items: center;
+    }
+ }

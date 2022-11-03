@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS BOOTSTRAP -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    
+    <!-- AOS ANIMACIONES -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- SEO -->
+    <meta name="description" content="Macetas de diseño">
+    <meta name="keywords"  content="macetas, plantas, floreros, rosario, argentina, 3d, decoracion">
+
+    <title>PLANTERHOUSE</title>
+    <link rel="shortcut icon" href="./media/favicon.png">
+</head>
+<body class="bgGradienteRadial">
+    <!-- INICIO LOGO + NAV -->
+    <div class="container-fluid sticky-top">
+        <header class="row">
+            <div class="col-lg-12 col-xs-12">
+                <nav class="navbar navbar-expand-lg navbar-light bgGradienteFondo">
+                    <a class="navbar-brand" href="#">
+                        <img src="media/logo.png" alt="logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                          <li class="nav-item active">
+                            <a class="nav-link" href="index.html">INICIO</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="./pages/productos.html">PRODUCTOS</a>
+                          </li>
+                          <!-- <li class="nav-item">
+                            <a class="nav-link" href="./pages/comocomprar.html">COMO COMPRAR</a>
+                          </li> -->
+                          <li class="nav-item">
+                            <a class="nav-link" href="./pages/revendedores.html">REVENDEDORES</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="./pages/contacto.html">CONTACTO</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="./pages/clientes.html">CLIENTES</a>
+                          </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="waves-header">
+                    <!--WAVES-->
+                    <div>
+                        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                        <defs>
+                            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                        </defs>
+                        <g class="parallax">
+                            <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(71,205,134,0.7)" />
+                            <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(53,135,52,0.5)" />
+                            <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(49,130,80,0.3)" />
+                            <use xlink:href="#gentle-wave" x="48" y="7" fill="rgba(49, 130, 80, 1.0)" />
+                        </g>
+                        </svg>
+                    </div>
+                    <!--WAVES END-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN LOGO + NAV -->
+    <!-- INICIO CONTENIDO -->
+    <main>  
+        <div class="container-fluid">
+            <!-- CARROUSEL -->        
+            <div class="row center full-screen">
+                <div class="col-lg-10 col-xs-12">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <img src="./media/estante1.jpg" class="d-block w-100" alt="foto estante con productos">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="./media/estante2.jpg" class="d-block w-100" alt="foto estante con productos">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./media/estante3.jpg" class="d-block w-100" alt="foto estante con productos">
+                            </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <!-- CONT PRINCIPAL-->
+            <div class="row">
+                <!-- INICIO ASIDE -->
+                <div class="col-lg-2 center aside">
+                    <a href="https://www.coderhouse.com/" target="_blank" data-aos="fade-right" data-aos-duration="500">
+                        <img class="img-fluid p-10"src="media/promo1.jpg" alt="promo coder">
+                    </a>
+                    <a href="https://www.coderhouse.com/" target="_blank" data-aos="fade-right" data-aos-duration="1000">
+                        <img class="img-fluid p-10"src="media/promo2.jpg" alt="promo coder">
+                    </a>
+                    <a href="https://www.coderhouse.com/" target="_blank" data-aos="fade-right" data-aos-duration="1500">
+                        <img class="img-fluid p-10"src="media/promo1.jpg" alt="promo coder">
+                    </a>    
+                    <a href="https://www.coderhouse.com/" target="_blank" data-aos="fade-right" data-aos-duration="1000">
+                        <img class="img-fluid p-10"src="media/promo2.jpg" alt="promo coder">
+                    </a>
+                    <a href="https://www.coderhouse.com/" target="_blank" data-aos="fade-right" data-aos-duration="1500">
+                        <img class="img-fluid p-10"src="media/promo1.jpg" alt="promo coder">
+                    </a>   
+                </div>
+                <!-- FIN ASIDE -->
+
+                <!-- CONTENIDO PRINCIPAL-->
+                <div class="col-lg-9">
+                    <!-- Categorias principales-->
+                    <div class="container-fluid p-20 full-screen">
+                        <div class="row">
+                            <div class="col-lg-12 col-xs-12 center">
+                                <img src="./media/modelosfull.png" class="img-fluid" alt="divisor modelos">
+                                <!-- <h2 class="center">MODELOS</h2> -->
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-4 col-xs-12 categoria center">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="./media/img_5796.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body center">
+                                    <h5 class="card-title">Suculentas</h5>
+                                    <p class="card-text">Tenemos una gran variedad de materiales, tamaños y colores</p>
+                                    <a href="./pages/productos.html" class="btn btn-dark">Ver</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-xs-12 categoria center">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="./media/img_5814.png" class="card-img-top" alt="...">
+                                    <div class="card-body center">
+                                    <h5 class="card-title">Hexa</h5>
+                                    <p class="card-text">Tenemos una gran variedad de materiales, tamaños y colores</p>
+                                    <a href="./pages/productos.html" class="btn btn-dark">Ver</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-xs-12 categoria center">
+                                <div class="card" style="width: 18rem;">
+                                    <img src="./media/img_5873.png" class="card-img-top" alt="...">
+                                    <div class="card-body center">
+                                    <h5 class="card-title">Floreros</h5>
+                                    <p class="card-text">Tenemos una gran variedad de materiales, tamaños y colores</p>
+                                    <a href="./pages/productos.html" class="btn btn-dark">Ver</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <!-- Ofertas-->
+                    <div class="container-fluid p-20 full-screen">
+                        <div class="row">
+                            <div class="col-lg-12 col-xs-12 center">
+                                <img src="./media/ofertasfull.png" class="img-fluid" alt="divisor ofertas">
+                                <!-- <h3 class="center">OFERTAS!</h3> -->
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-3 col-xs-12 p-20 center">
+                                <div class="producto center" data-aos="fade-up" data-aos-duration="500">
+                                    <img class="img-fluid" src="./media/amarilla.jpg" alt="maceta chica amarilla">
+                                    <a class="txtProducto">Maceta amarilla</a>
+                                    <a class="txtPrecio">$1.500,00</a>
+                                    <button type="button" class="btn btn-dark">AGREGAR AL CARRITO</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-xs-12 p-20 center">
+                                <div class="producto center" data-aos="fade-up" data-aos-duration="700">
+                                    <img class="img-fluid" src="./media/verde.jpg" alt="maceta chica verde">
+                                    <a class="txtProducto">Maceta verde</a>
+                                    <a class="txtPrecio">$1.500,00</a>
+                                    <button type="button" class="btn btn-dark">AGREGAR AL CARRITO</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-xs-12 p-20 center" data-aos="fade-up" data-aos-duration="900">
+                                <div class="producto center">
+                                    <img class="img-fluid" src="./media/rosa.jpg" alt="maceta chica rosa">
+                                    <a class="txtProducto">Maceta rosa</a>
+                                    <a class="txtPrecio">$1.500,00</a>
+                                    <button type="button" class="btn btn-dark">AGREGAR AL CARRITO</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-xs-12 p-20 center" data-aos="fade-up" data-aos-duration="1100">
+                                <div class="producto center">
+                                    <img class="img-fluid" src="./media/violeta.jpg" alt="maceta chica violeta">
+                                    <a class="txtProducto">Maceta violeta</a>
+                                    <a class="txtPrecio">$1.500,00</a>
+                                    <button type="button" class="btn btn-dark">AGREGAR AL CARRITO</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN CONTENIDO PRINCIPAL-->
+            </div>
+        </div>  
+    </main>
+    <!-- FIN CONTENIDO -->
+        <!-- INICIO FOOTER -->
+        <div class="container-fluid bg-dark text-white">
+            <footer class="row">
+                <div class="col-lg-5 col-xs-12 center text-secondary text-left">
+                    <a class="navbar-brand" href="#">
+                        <img src="./media/logo.png" alt="logo">
+                    </a>
+                    <p class="ml-3">Nos dedicamos a la creación de objetos decorativos impresos en 3D. Esto nos permite producir de manera dinámica y amigable con nuestro planeta. Todos nuestros productos son elaborados en PLA, un plástico biodegradable de origen vegetal.</p>
+                </div>
+                <div class="col-lg-4 col-xs-12 p-10">
+                    <h3>REDES SOCIALES</h3>
+                    <li><a href="https://www.facebook.com/" target="_blank" class="rrss-facebook">Facebook</a></li>
+                    <li><a href="https://www.instagram.com/coderhouse/" target="_blank" class="rrss-instagram">Instagram</a></li>
+                    <li><a href="https://www.youtube.com/c/CoderHouse" target="_blank" class="rrss-youtube">Youtube</a></li>
+                </div>
+                <div class="col-lg-3 col-xs-12 p-10">
+                    <h3>CONTACTO</h3>
+                    <li><a href="mailto:mnzarria@gmail.com">mnzarria@gmail.com</a></li>
+                    <li><a href="#">+54 341 6121972</a></li>
+                </div>
+                <div class="col-lg-12 col-xs-12 bg-dark text-secondary">
+                    <h6>Designed and built by MZ as Web Developing #36385 final project.</h6>
+                </div>
+            </footer>
+        </div>
+    <!-- FIN FOOTER -->    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script>
+  		AOS.init();
+	</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>
