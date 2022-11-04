@@ -15,7 +15,7 @@
     <meta name="description" content="Encontrá donde comprar tus macetas de diseño">
     <meta name="keywords"  content="macetas, plantas, floreros, rosario, argentina, 3d, decoracion">
 
-    <title>Revendedores</title>
+    <title>Elegí tus plantas!</title>
     <link rel="shortcut icon" href="../media/favicon.png">
 </head>
 <body class="bgGradienteRadial">
@@ -83,34 +83,107 @@
         <div class="container-fluid">
             <div class="row left m-20">
                 <div class="col-lg-12 col-xs-12">
-                    <h1>Punto de retiro</h1>                
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 col-xs-12 center">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.71569971477!2d-58.43446128425744!3d-34.58605956407204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc945173b3dd7%3A0xe8a347bb55df550c!2sCoderhouse%20Argentina!5e0!3m2!1ses!2sar!4v1658876205508!5m2!1ses!2sar" width="1200" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="p-20"></iframe>
-                </div>
-            </div>
-            <div class="row center m-20">
-                <div class="col-lg-12 col-xs-12 left">
-                    <p>Si querés revender nuestros productos, contactate con nosotros a <a href="mailto:mnzarria@gmail.com">mnzarria@gmail.com</a> o al +5493416121972 para conocer mas información.</p>
-                    <p>Ya son punto de venta Planterhouse:</p>
+                    <h1>Búsqueda de plantas</h1>                
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-1"></div>
-                <div class="col-lg-10 col-xs-12 mb-5 center grid-wrapper">
-                    <img class="img-fluid w-75" src="../media/logocarreofur.png" alt="logo carrefour">
-                    <img class="img-fluid w-75" src="../media/logocoto.png" alt="logo coto">
-                    <img class="img-fluid w-75" src="../media/logogallega.jpg" alt="logo gallega">
-                    <img class="img-fluid w-75" src="../media/logojumbo.jpg" alt="logo jumbo">
-                    <img class="img-fluid w-75" src="../media/logonorte.png" alt="logo norte">
-                    <img class="img-fluid w-75" src="../media/logooxxo.png" alt="logo oxxo">
-                    <img class="img-fluid w-75" src="../media/logosupermarket.png" alt="logo supermarket">
-                    <img class="img-fluid w-75" src="../media/logounimarc.png" alt="logo unimarc">
-                    <img class="img-fluid w-75" src="../media/logosuma.png" alt="logo suma">
-                    <img class="img-fluid w-75" src="../media/logolibertad.jpg" alt="logo libertad">
+                <div class="col-lg-5 col-xs-11">
+                    <h1 class="m-20">Buscar plantas para tu casa!</h1>            
+                    <div class="input-group p-2">
+                        <span class="input-group-text" id="basic-addon1">Nombre</span>
+                        <input type="text" class="form-control" placeholder="nombre de la planta" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group p-2">
+                        <label class="input-group-text" for="inputGroupSelect01">Luz</label>
+                        <select class="form-select" id="inputGroupSelect01">
+                            <option value="0"></option>
+                            <option value="1">Poca luz</option>
+                            <option value="2">Luz normal</option>
+                            <option value="3">Mucha luz</option>
+                        </select>
+                    </div>
+                    <div class="input-group p-2">
+                        <label class="input-group-text" for="inputGroupSelect01">Riego</label>
+                        <select class="form-select" id="inputGroupSelect01">
+                            <option value="0"></option>
+                            <option value="1">Poco riego</option>
+                            <option value="2">Riego normal</option>
+                            <option value="3">Mucho riego</option>
+                        </select>
+                    </div>
+                    <div class="input-group p-2">
+                        <label class="input-group-text" for="inputGroupSelect01">Dificultad</label>
+                        <select class="form-select" id="inputGroupSelect01">
+                            <option value="0"></option>
+                            <option value="1">Fácil</option>
+                            <option value="2">Intermedia</option>
+                            <option value="3">Difícil</option>
+                        </select>
+                    </div>
+                    <div class="input-group p-2">
+                        <span class="input-group-text" id="basic-addon1">Precio</span>
+                        <input type="text" class="form-control" placeholder="$$$$" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="col-12 p-2">
+                        <button class="btn btn-dark" type="submit">Buscar plantas!</button>
+                        <button class="btn btn-dark" type="reset">Limpiar datos</button>
+                    </div>
                 </div>
+            </div>
+            <div class="row">
+                <div class="col-12 p-2">
+                    <button class="btn btn-dark" type="submit">Crear nueva planta!</button>
+                </div>
+                <div class="col-lg-1"></div>
+                <div class="col-lg-5 col-xs-11">
+                    <h2 class="m-20">Ingresá los datos de la planta nueva:</h2>            
+                    <div class="input-group p-2">
+                        <span class="input-group-text" id="basic-addon1">Nombre</span>
+                        <input type="text" class="form-control" placeholder="nombre de la planta" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group p-2">
+                        <label class="input-group-text" for="inputGroupSelect01">Luz</label>
+                        <select class="form-select" id="inputGroupSelect01">
+                          <option value="1">Poca luz</option>
+                          <option value="2">Luz normal</option>
+                          <option value="3">Mucha luz</option>
+                        </select>
+                    </div>
+                    <div class="input-group p-2">
+                        <label class="input-group-text" for="inputGroupSelect01">Riego</label>
+                        <select class="form-select" id="inputGroupSelect01">
+                          <option value="1">Poco riego</option>
+                          <option value="2">Riego normal</option>
+                          <option value="3">Mucho riego</option>
+                        </select>
+                    </div>
+                    <div class="input-group p-2">
+                        <label class="input-group-text" for="inputGroupSelect01">Dificultad</label>
+                        <select class="form-select" id="inputGroupSelect01">
+                          <option value="1">Fácil</option>
+                          <option value="2">Intermedia</option>
+                          <option value="3">Difícil</option>
+                        </select>
+                    </div>
+                    <div class="input-group p-2">
+                        <span class="input-group-text" id="basic-addon1">Precio</span>
+                        <input type="text" class="form-control" placeholder="$$$$" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group p-2">
+                        <label class="input-group-text" for="inputGroupFile01">Imagen</label>
+                        <input type="file" class="form-control" id="inputGroupFile01">
+                      </div>
+                    <div class="col-12 p-2">
+                        <button class="btn btn-dark" type="submit">Cargar planta!</button>
+                        <button class="btn btn-dark" type="reset">Limpiar datos</button>
+                    </div>
+                </div>
+    </div>
+            <div class="row center m-20">
+            </div>
+            <div class="row">
+                <div class="col-lg-1"></div>
             </div>
         </div>
     </main>
@@ -143,5 +216,6 @@
     <!-- FIN FOOTER --> 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="../js/elegitusplantas.js"></script>
 </body>
 </html>
