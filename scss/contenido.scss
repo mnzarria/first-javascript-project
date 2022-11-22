@@ -97,3 +97,11 @@ footer{
     padding: 0px;
     margin: 0px;
 }
+td{
+    text-transform: capitalize;
+    text-align: center;
+}
+td img {
+    max-width: 150px;
+    max-height: 150px;
+}
