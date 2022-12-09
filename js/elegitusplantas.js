@@ -21,8 +21,10 @@ const plantas = [
     {id: 6, nombre: "Fitonia rosa",luz:"normal",riego:"mucho",dificultad:"intermedio",precio:2500,img:"../media/fitoniarosa.jpg"},
     {id: 7, nombre: "Fitonia verde",luz:"normal",riego:"mucho",dificultad:"intermedio",precio:2500,img:"../media/fitoniaverde.jpg"},
 ];
+
 // guardarLS(plantas);
 let nuevoStock;
+
 if (JSON.parse(localStorage.getItem("plantas"))!=null){
   nuevoStock = JSON.parse(localStorage.getItem("plantas"));
   console.log("Hay un stock cargado");
@@ -31,6 +33,7 @@ if (JSON.parse(localStorage.getItem("plantas"))!=null){
   console.log("No hay stock cargado");
   nuevoStock = plantas;
 }
+
 
 //DEFINICION DE FUNCIONES
   //Función constructora Planta
@@ -104,7 +107,7 @@ function crearHtml(arr) {
 
     arrayBorrar.forEach(btn=>{
       btn.addEventListener("click", ()=>{
-        console.log(btn.id);
+        console.log("Item "+btn.id+" borrado");
         nuevoStock= nuevoStock.filter(el=>el.id != btn.id);
         guardarLS(nuevoStock);
         crearHtml(nuevoStock);
@@ -128,14 +131,35 @@ function limpiarCampos() {
 
 //EJECUCION DE FUNCIONES
 document.getElementById("formCrear").style.display='none';
+
 guardarLS(nuevoStock);
 crearHtml(nuevoStock);
 
 //MANEJO DE EVENTOS
 //Crear nueva Planta
 btnCrear.addEventListener("click", () => {
-    nuevaPlanta = crearPlanta();
-    });
+  nuevaPlanta = crearPlanta();
+});
+
+btnCerrar.addEventListener("click", () => {
+  document.getElementById("formCrear").style.display='none';  
+});
+
+
+// Uso Fetch para emular el stock de plantas en distintos locales desde un JSON
+btnStock.addEventListener("click", () => {
+fetch('../data/stock.json')
+.then(res=>res.json())
+.then(stock=>{
+  let stockActual = [...stock];
+  Swal.fire({
+    title: "STOCK",
+    html: "Rosario: " + stockActual[0].Rosario + "u" +
+    "<br> Cordoba: " + stockActual[0].Cordoba + "u" +
+    "<br> CABA: " + stockActual[0].CABA + "u"
+  })
+})
+});
 
 btnCargar.addEventListener("click",() =>{
   let ultimaPlanta = nuevoStock[(nuevoStock.length)-1];
@@ -155,6 +179,28 @@ btnCargar.addEventListener("click",() =>{
       // limpiarCampos();
       console.log(nuevaPlanta);
       console.log(plantas);
+      Swal.fire({
+        title: 'Felicitaciones!',
+        text: "Agregaste una nueva planta",
+        background: '#C8C85E',
+        showCancelButton: true,
+        confirmButtonColor: 'rgba(53, 135, 52, 1.0)',
+        cancelButtonColor: '#D98324',
+        confirmButtonText: 'Ver nueva planta'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire({
+            imageUrl: nuevaPlanta.img,
+            imageAlt: 'foto nueva planta',
+            imageHeight: 300,
+            title: nuevaPlanta.nombre,
+            html: "Dificultad: "+ nuevaPlanta.dificultad + 
+            "<br> Riego: "+ nuevaPlanta.riego +
+            "<br> Luz: "+ nuevaPlanta.luz +
+            "<br> Precio: "+ nuevaPlanta.precio +"$"
+          })
+        }
+      })
       limpiarCampos();
       guardarLS(nuevoStock);
       crearHtml(nuevoStock);
@@ -162,17 +208,17 @@ btnCargar.addEventListener("click",() =>{
     
 //BUSQUEDA
 busqueda.addEventListener("input",() => {
-  let nuevaBusqueda = filtrar(plantas, busqueda.value, "nombre");
+  let nuevaBusqueda = filtrar(nuevoStock, busqueda.value, "nombre");
   crearHtml(nuevaBusqueda);
 })
 
 for (const radio of radios) {
-  console.log(radio);
+  // console.log(radio);
   radio.addEventListener('change', ()=>{
     if(radio.checked){
       //llamo al funcion generica
       busqueda.addEventListener("input", () => {
-        let nuevaBusqueda = filtrar(plantas, busqueda.value, radio.value);
+        let nuevaBusqueda = filtrar(nuevoStock, busqueda.value, radio.value);
         crearHtml(nuevaBusqueda);
       });
 

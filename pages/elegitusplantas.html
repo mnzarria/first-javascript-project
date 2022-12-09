@@ -82,102 +82,117 @@
     <main>
         <div class="container-fluid">
             <div class="row left m-20">
+                <button id="btnStock" class="btn btn-success p-2 m-1" type="submit">Consultar stock</button>
+
                 <div class="col-lg-12 col-xs-12">
                     <h1>Búsqueda de plantas</h1>                
                 </div>
             </div>
-            <!-- BUSQUEDA DE PLANTAS -->
             <div class="row">
-                <div class="col-lg-2 input-group">
-                    <input id="busqueda" type="search" class="form-control">
-                    <label class="p-2" for="busqueda">Buscar</label>
+                <div class="col-lg-6">
+                    <!-- BUSQUEDA DE PLANTAS -->
+                    <div class="row">
+                        <div class="col-lg-1">
+                        </div>
+                        <div class="col-lg-6 input-group">
+                            <input id="busqueda" type="search" class="form-control">
+                            <label class="p-2" for="busqueda">Buscar</label>
+                        </div>
+                        <div class="col-lg-2 form-check">
+                            <input class="form-check-input" name="options" id="option1" type="radio" value='nombre' checked>
+                            <label class="form-check-label" for="option1">Nombre</label>
+                            <br>
+                            <input class="form-check-input" name="options" id="option1" type="radio" value='luz' checked>                        
+                            <label class="form-check-label" for="option2">Luz</label>
+                            <br>
+                            <input class="form-check-input" name="options" id="option" type="radio" value='riego' checked>
+                            <label class="form-check-label" for="option3">Riego</label>
+                            <br>   
+                            <input class="form-check-input" name="options" id="option3" type="radio" value='dificultad' checked>
+                            <label class="form-check-label" for="option4">Dificultad</label>
+                            <br>    
+                            <input class="form-check-input" name="options" id="option5" type="radio" value='precio' checked>
+                            <label class="form-check-label" for="option5">Precio</label>
+                        </div>
+                    </div>
+                    <!-- AGREGADO DE PLANTAS -->
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-11 p-2">
+                            <button id="btnCrear" class="btn btn-dark" type="submit">Crear nueva planta!</button>
+                            <button id="btnCerrar" class="btn btn-dark" type="submit">X</button>
+
+                        </div>
+                        <div class="col-lg-1"></div>
+                        <form id="formCrear" class="col-lg-9 col-xs-11 p-2">
+                            <h2 class="m-20">Ingresá los datos de la planta nueva:</h2>            
+                            <div class="input-group p-2">
+                                <span class="input-group-text">Nombre</span>
+                                <input id="nombrePlanta" type="text" class="form-control" placeholder="nombre de la planta" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group p-2">
+                                <label class="input-group-text" for="inputGroupSelect01">Luz</label>
+                                <select id="luzPlanta" class="form-select" id="inputGroupSelect01">
+                                    <option value="0"></option>
+                                    <option value="1">Poca luz</option>
+                                    <option value="2">Luz normal</option>
+                                    <option value="3">Mucha luz</option>
+                                </select>
+                            </div>
+                            <div class="input-group p-2">
+                                <label class="input-group-text" for="inputGroupSelect01">Riego</label>
+                                <select id="riegoPlanta" class="form-select" id="inputGroupSelect01">
+                                    <option value="0"></option>
+                                    <option value="2">Riego normal</option>
+                                    <option value="1">Poco riego</option>
+                                    <option value="3">Mucho riego</option>
+                                </select>
+                            </div>
+                            <div class="input-group p-2">
+                                <label class="input-group-text" for="inputGroupSelect01">Dificultad</label>
+                                <select id="difPlanta" class="form-select" id="inputGroupSelect01">
+                                    <option value="0"></option>
+                                    <option value="1">Facil</option>
+                                    <option value="3">Dificil</option>
+                                    <option value="2">Intermedia</option>
+                                </select>
+                            </div>
+                            <div class="input-group p-2">
+                                <span class="input-group-text" id="basic-addon1">Precio</span>
+                                <input id="precioPlanta" type="text" class="form-control" placeholder="$$$$" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                            <div class="input-group p-2">
+                                <label class="input-group-text" for="inputGroupFile01">Imagen URL</label>
+                                <input id="imgPlanta" type="text" class="form-control" id="inputGroupFile01">
+                            </div>
+                            <div class="col-12 p-2">
+                                <button id="btnCargar" class="btn btn-dark" type="button" value="Guardar">Cargar planta!</button>
+                                <button class="btn btn-dark" type="reset">Limpiar datos</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="col-lg-2 form-check">
-                    <input class="form-check-input" name="options" id="option1" type="radio" value='nombre' checked>
-                    <label class="form-check-label" for="option1">Nombre</label>
-                    <br>
-                    <input class="form-check-input" name="options" id="option1" type="radio" value='luz' checked>                        <label class="form-check-label" for="option2">Luz</label>
-                    <br>
-                    <input class="form-check-input" name="options" id="option" type="radio" value='riego' checked>
-                    <label class="form-check-label" for="option3">Riego</label>
-                    <br>   
-                    <input class="form-check-input" name="options" id="option3" type="radio" value='dificultad' checked>
-                    <label class="form-check-label" for="option4">Dificultad</label>
-                    <br>    
-                    <input class="form-check-input" name="options" id="option5" type="radio" value='precio' checked>
-                    <label class="form-check-label" for="option5">Precio</label>
-                </div>
-                <table class="col-lg-6 table table-sm table-striped table-dark" id="tabla">
-                    <thead class="thead-dark">
-                      <tr>
-                          <td scope="col">Nombre</td>
-                          <td scope="col">Luz</td>
-                          <td scope="col">Riego</td>
-                          <td scope="col">Dificultad</td>
-                          <td scope="col">Precio</td>
-                          <td scope="col">Img</td>
-                          <td scope="col">id</td>
-                      </tr>
-                    </thead>
-                    <tbody class="tbody-light" id="table-body">
-                      <!-- Contenido dinámico -->
-                    </tbody>
-                </table>
-                </div>
+                <div class="col-lg-6">
+                    <!-- Inicio tabla dinámica -->
+                    <table class="col-lg-6 table table-sm table-striped table-dark" id="tabla">
+                        <thead class="thead-dark">
+                          <tr>
+                              <td scope="col">Nombre</td>
+                              <td scope="col">Luz</td>
+                              <td scope="col">Riego</td>
+                              <td scope="col">Dificultad</td>
+                              <td scope="col">Precio</td>
+                              <td scope="col">Img</td>
+                              <td scope="col">id</td>
+                          </tr>
+                        </thead>
+                        <tbody class="tbody-light" id="table-body">
+                        
+                        </tbody>
+                    </table>
+                    <!-- Fin tabla dinámica --></div>
+            </div>
             
-            <!-- AGREGADO DE PLANTAS -->
-            <div class="row">
-                <div class="col-12 p-2">
-                    <button id="btnCrear" class="btn btn-dark" type="submit">Crear nueva planta!</button>
-                </div>
-                <div class="col-lg-1"></div>
-                <form id="formCrear" class="col-lg-5 col-xs-11">
-                    <h2 class="m-20">Ingresá los datos de la planta nueva:</h2>            
-                    <div class="input-group p-2">
-                        <span class="input-group-text">Nombre</span>
-                        <input id="nombrePlanta" type="text" class="form-control" placeholder="nombre de la planta" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group p-2">
-                        <label class="input-group-text" for="inputGroupSelect01">Luz</label>
-                        <select id="luzPlanta" class="form-select" id="inputGroupSelect01">
-                            <option value="0"></option>
-                            <option value="1">Poca luz</option>
-                            <option value="2">Luz normal</option>
-                            <option value="3">Mucha luz</option>
-                        </select>
-                    </div>
-                    <div class="input-group p-2">
-                        <label class="input-group-text" for="inputGroupSelect01">Riego</label>
-                        <select id="riegoPlanta" class="form-select" id="inputGroupSelect01">
-                            <option value="0"></option>
-                            <option value="2">Riego normal</option>
-                            <option value="1">Poco riego</option>
-                            <option value="3">Mucho riego</option>
-                        </select>
-                    </div>
-                    <div class="input-group p-2">
-                        <label class="input-group-text" for="inputGroupSelect01">Dificultad</label>
-                        <select id="difPlanta" class="form-select" id="inputGroupSelect01">
-                            <option value="0"></option>
-                            <option value="1">Facil</option>
-                            <option value="3">Dificil</option>
-                            <option value="2">Intermedia</option>
-                        </select>
-                    </div>
-                    <div class="input-group p-2">
-                        <span class="input-group-text" id="basic-addon1">Precio</span>
-                        <input id="precioPlanta" type="text" class="form-control" placeholder="$$$$" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group p-2">
-                        <label class="input-group-text" for="inputGroupFile01">Imagen URL</label>
-                        <input id="imgPlanta" type="text" class="form-control" id="inputGroupFile01">
-                      </div>
-                    <div class="col-12 p-2">
-                        <button id="btnCargar" class="btn btn-dark" type="button" value="Guardar">Cargar planta!</button>
-                        <button class="btn btn-dark" type="reset">Limpiar datos</button>
-                    </div>
-                </form>
-    </div>
             <div class="row center m-20">
             </div>
             <div class="row">
@@ -214,6 +229,7 @@
     <!-- FIN FOOTER --> 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/elegitusplantas.js"></script>
 </body>
 </html>
