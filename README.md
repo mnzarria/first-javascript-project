@@ -12,6 +12,8 @@ se despliega un modal desde el cual es posible ver las propiedades del nuevo pro
 Utilicé Bootstrap para la mayor parte del maquetado. Para las animaciones usé AOS (publicidades/productos), Codepen (header) y hovers 
 configurados a mano en productos, categorías y links de redes sociales. 
 
+Agregué un botón de 'Consultar stock' únicamente para realizar fetch a un archivo .JSON propio, y cumplir con las consignas de evaluación.
+
 El sitio es responsive. En la versión mobile, por decisión propia, algunos de los elementos quedan ocultos (publicidades, aside de productos, imagen del formulario de contacto).
 
 Me permitió obtener la calificación máxima según la rúbrica :
